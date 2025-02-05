@@ -96,13 +96,14 @@
 
       .main {
       
-            width: 100%;
-    position: absolute;
-    z-index: 1000000;
-    margin-top: 120px;
-    height: calc(100% - 200px);
-    padding: 20px;
-    overflow: scroll;
+        width: 100%;
+        position: absolute;
+        z-index: 1000000;
+        margin-top: 120px;
+        height: 100%;
+        padding: 20px;
+        overflow: scroll;
+        padding-bottom: 200px;
       }
 
       .newStories {
@@ -468,6 +469,7 @@
       @media (max-width: 780px) {
         .main {
           margin-top: 20px;
+          padding-bottom: 50px;
         }
         .desktop-nav {
           display: none; /* Hide the desktop nav */
