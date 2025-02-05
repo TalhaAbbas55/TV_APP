@@ -275,7 +275,13 @@
       <div class="title">The Smurfs</div>
       <div class="d-flex gap-2">
         <span class="title-tag">
-          <img class="eyeopen" width="35px" height="35px" src="eye-open.svg" alt="" />
+          <img
+            class="eyeopen"
+            width="35px"
+            height="35px"
+            src="eye-open.svg"
+            alt=""
+          />
           <span class="title-count">159k</span>
         </span>
         <span class="title-tag">
@@ -320,7 +326,7 @@
         </div>
         <div id="carousel" class="carousel">
           <!-- Video Cards -->
-          <div class="video-container" onclick="redirectToPage('video1.html')">
+          <div class="video-container" onclick="redirectToPage('https://www.w3schools.com/html/mov_bbb.mp4')">
             <video
               src="https://www.w3schools.com/html/mov_bbb.mp4"
               muted
@@ -335,24 +341,7 @@
             <div class="play-video-title">STAR WARS</div>
             <div class="video-time">3:00</div>
           </div>
-
-          <div class="video-container" onclick="redirectToPage('video2.html')">
-            <video
-              src="https://www.w3schools.com/html/mov_bbb.mp4"
-              muted
-              onmouseover="this.play()"
-              onmouseout="this.pause(); this.currentTime = 0;"
-            ></video>
-            <span class="tag play-video-tag">
-              <img class="eyeopen" src="eye-open.svg" alt="" />
-              <span class="count">240k</span>
-            </span>
-            <img class="playedvideopart" src="playedvideopart.svg" alt="" />
-            <div class="play-video-title">AVENGERS</div>
-            <div class="video-time">4:15</div>
-          </div>
-
-          <div class="video-container" onclick="redirectToPage('video1.html')">
+          <div class="video-container" onclick="redirectToPage('https://www.w3schools.com/html/mov_bbb.mp4')">
             <video
               src="https://www.w3schools.com/html/mov_bbb.mp4"
               muted
@@ -367,8 +356,7 @@
             <div class="play-video-title">STAR WARS</div>
             <div class="video-time">3:00</div>
           </div>
-
-          <div class="video-container" onclick="redirectToPage('video1.html')">
+          <div class="video-container" onclick="redirectToPage('https://www.w3schools.com/html/mov_bbb.mp4')">
             <video
               src="https://www.w3schools.com/html/mov_bbb.mp4"
               muted
@@ -383,8 +371,7 @@
             <div class="play-video-title">STAR WARS</div>
             <div class="video-time">3:00</div>
           </div>
-
-          <div class="video-container" onclick="redirectToPage('video1.html')">
+          <div class="video-container" onclick="redirectToPage('https://www.w3schools.com/html/mov_bbb.mp4')">
             <video
               src="https://www.w3schools.com/html/mov_bbb.mp4"
               muted
@@ -399,7 +386,7 @@
             <div class="play-video-title">STAR WARS</div>
             <div class="video-time">3:00</div>
           </div>
-          <div class="video-container" onclick="redirectToPage('video1.html')">
+          <div class="video-container" onclick="redirectToPage('https://www.w3schools.com/html/mov_bbb.mp4')">
             <video
               src="https://www.w3schools.com/html/mov_bbb.mp4"
               muted
@@ -414,7 +401,7 @@
             <div class="play-video-title">STAR WARS</div>
             <div class="video-time">3:00</div>
           </div>
-          <div class="video-container" onclick="redirectToPage('video1.html')">
+          <div class="video-container" onclick="redirectToPage('https://www.w3schools.com/html/mov_bbb.mp4')">
             <video
               src="https://www.w3schools.com/html/mov_bbb.mp4"
               muted
@@ -429,8 +416,40 @@
             <div class="play-video-title">STAR WARS</div>
             <div class="video-time">3:00</div>
           </div>
-
-          <!-- Add more video cards here -->
+          <div class="video-container" onclick="redirectToPage('https://www.w3schools.com/html/mov_bbb.mp4')">
+            <video
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              muted
+              onmouseover="this.play()"
+              onmouseout="this.pause(); this.currentTime = 0;"
+            ></video>
+            <span class="tag play-video-tag">
+              <img class="eyeopen" src="eye-open.svg" alt="" />
+              <span class="count">159k</span>
+            </span>
+            <img class="playedvideopart" src="playedvideopart.svg" alt="" />
+            <div class="play-video-title">STAR WARS</div>
+            <div class="video-time">3:00</div>
+          </div>
+        
+          <div
+            class="video-container"
+            onclick="redirectToPage('https://www.w3schools.com/html/mov_bbb.mp4')"
+          >
+            <video
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              muted
+              onmouseover="this.play()"
+              onmouseout="this.pause(); this.currentTime = 0;"
+            ></video>
+            <span class="tag play-video-tag">
+              <img class="eyeopen" src="eye-open.svg" alt="" />
+              <span class="count">159k</span>
+            </span>
+            <img class="playedvideopart" src="playedvideopart.svg" alt="" />
+            <div class="play-video-title">STAR WARS</div>
+            <div class="video-time">3:00</div>
+          </div>
         </div>
       </div>
 
@@ -461,8 +480,13 @@
         carousel.style.transform = `translateX(${offset}px)`;
       }
 
-      function redirectToPage(url) {
-        window.location.href = url;
+      // Function to redirect with video URL
+      function redirectToPage(videoUrl) {
+        // Navigate to player.html with the video URL as a query parameter
+        const playerPageUrl = `http://localhost:5500/player.html?url=${encodeURIComponent(
+          videoUrl
+        )}`;
+        window.location.href = playerPageUrl;
       }
     </script>
   </body>
