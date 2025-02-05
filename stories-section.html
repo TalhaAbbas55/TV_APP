@@ -19,7 +19,7 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Settings Sidebar</title>
+    <title>Stories</title>
 
     <style>
       * {
@@ -40,8 +40,6 @@
 
       .main {
         display: flex;
-
-        justify-content: space-between;
         background-image: url('stories-section.svg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -58,7 +56,10 @@
         border-radius: 15px;
         padding: 20px;
         overflow: hidden;
-        position: relative;
+        bottom: 30px;
+        display: flex;
+        place-self: center;
+        position: absolute;
         margin-inline: auto;
       }
 
@@ -107,6 +108,51 @@
         border-radius: 4px;
       }
 
+      .title-tag {
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: rgb(65, 67, 68);
+        padding: 5px 8px;
+        border-radius: 4px;
+        width: min-content;
+      }
+      .title-tag-video-container {
+        display: flex;
+        /* justify-content: space-between; */
+        margin-bottom: 10px;
+        gap: 10px;
+      }
+      .title-tag-video {
+        font-family: Genos;
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 40.8px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+        background-color: #5c5b5f;
+        padding-inline: 10px;
+        border-radius: 5px;
+      }
+      .title-tag-video-inactive {
+        font-family: Genos;
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 40.8px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+        background: #0000004d;
+        padding-inline: 10px;
+        border-radius: 5px;
+      }
       .tag img {
         height: 16px;
       }
@@ -156,7 +202,6 @@
         z-index: 2;
         transition: 0.3s ease;
         color: #fff;
-        
       }
 
       .arrow-svg:hover {
@@ -190,16 +235,89 @@
           width: 15px;
         }
       }
+      .title {
+        font-family: Oswald;
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 133.38px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+      }
+      .stats-text {
+        color: #ffffff;
+        font-family: Genos;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 38.4px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      .dot {
+        margin-inline-start: 15px;
+        margin-inline-end: 15px;
+      }
+      .count {
+        font-family: Genos;
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 40.8px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
     </style>
   </head>
   <body class="main">
-    <div>
-      The Smurfs
-
+    <div class="mt-4 mx-4">
+      <div class="title">The Smurfs</div>
+      <div class="d-flex gap-2">
+        <span class="title-tag">
+          <img class="eyeopen" width="35px" height="35px" src="eye-open.svg" alt="" />
+          <span class="count">159k</span>
+        </span>
+        <span class="title-tag">
+          <span class="count">12+</span>
+        </span>
+        <span class="title-tag">
+          <span class="count">4K</span>
+        </span>
+      </div>
+      <div class="d-flex gap-2">
+        <span>
+          <span class="stats-text">
+            <img class="dot" src="dot.svg" alt="" />2012<img
+              class="dot"
+              src="dot.svg"
+              alt=""
+          /></span>
+        </span>
+        <span>
+          <span class="stats-text">1 Season</span>
+        </span>
+        <span>
+          <span class="stats-text"
+            ><img class="dot" src="dot.svg" alt="" />10 Episode<img
+              class="dot"
+              src="dot.svg"
+              alt=""
+          /></span>
+        </span>
+      </div>
     </div>
     <div class="carousel-container">
       <!-- Carousel Wrapper -->
       <div class="carousel-wrapper">
+        <div class="title-tag-video-container">
+          <span class="title-tag-video">
+            <span class="count">Season 1</span>
+          </span>
+          <span class="title-tag-video-inactive">
+            <span class="count">Season 2</span>
+          </span>
+        </div>
         <div id="carousel" class="carousel">
           <!-- Video Cards -->
           <div class="video-container" onclick="redirectToPage('video1.html')">
